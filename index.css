@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: linear-gradient(rgb(32, 36, 43), black);
+    font-family: 'Lora', serif;
+}
+.contenedor img {
+    width: 18vw;
+    height: 35vh;
+    margin: 10px;
+    opacity: 70%;
+    transform: initial;
+    transition: opacity 1.5s ease;
+    transition: transform 1.5s ease;
+
+}
+
+.contenedor img:hover {
+    transition: 1.5s ease;
+    opacity: 100%;
+    transform: scale(1.1,1.1);
+}
+
+.paginas {
+    background: linear-gradient(rgb(197, 194, 194), white);
+}
+
+.enlaces {
+    width: 5vw;
+    height: 10vh;
+}
