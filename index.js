@@ -1,9 +1,15 @@
-document.addEventListener('DOMContentLoaded', () => {
+const botonA = document.getElementById("botonA")
+const botonS = document.getElementById("botonS")
+const botonP = document.getElementById("botonP")
+const botonC = document.getElementById("botonC")
+
+const sectionA = document.getElementById("presentacion")
+const sectionB = document.getElementById("skills")
+const sectionC = document.getElementById("paginas")
+const sectionD = document.getElementById("contactos")
+
+document.addEventListener("DOMContentLoaded", () => {
     window.location.hash = "#inicio"
-    const botonA = document.getElementById("botonA")
-    const botonS = document.getElementById("botonS")
-    const botonP = document.getElementById("botonP")
-    const botonC = document.getElementById("botonC")
 
     botonA.addEventListener("click", () => {
         scrollToSection("presentacion");
@@ -26,19 +32,36 @@ document.addEventListener('DOMContentLoaded', () => {
       if (section) {
         window.scrollTo({
           top: section.offsetTop,
-          behavior: "smooth"
+          behavior: "smooth",
+
         });
       }
     }
   });
 
+window.addEventListener("scroll", function() {
+  pintar (sectionA, botonA)
+  pintar (sectionB, botonS)
+  pintar (sectionC, botonP)
+  pintar (sectionD, botonC)
 
-  window.addEventListener("scroll", function() {
-    const elemento = document.getElementById("presentacion");
-    const posicionElemento = elemento.getBoundingClientRect().top;
-    const alturaVentana = window.innerHeight;
-  
-    if (posicionElemento < alturaVentana) {
-      elemento.classList.add("presentacion");
-    }
   });
+
+  function pintar (section, boton) {
+    const sectionTop = section.offsetTop;
+    const sectionBottom = sectionTop + section.offsetHeight;
+    const windowPosition = window.scrollY;
+  
+    if (windowPosition >= sectionTop && windowPosition < sectionBottom) {
+      boton.style.color = "yellow";
+      boton.style.fontWeight = "bold";
+    } else {
+      boton.style.color = "white";
+      boton.style.fontWeight = "normal";
+    }
+  }
+
+
+const botonDescarga = document.getElementById("descargar")
+
+

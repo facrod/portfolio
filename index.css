@@ -11,7 +11,7 @@ body {
     font-weight: bold;
 }
 .presentacionNombre {
-    height: 100vh;
+    height: 90vh;
     display: grid;
     place-items: center;
 }
@@ -28,14 +28,16 @@ body {
     transition: transform 1.5s ease;
 
 }
-
 .contenedor img:hover {
     transition: 1.5s ease;
     opacity: 100%;
     transform: scale(1.1,1.1);
 }
 
-.paginas {
+#paginas {
+    height: 190vh;
+}
+.pagina {
     background: linear-gradient(rgb(197, 194, 194), white);
     color: black;
 }
@@ -45,26 +47,3 @@ body {
     height: 10vh;
 }
 
-#paginas {
-    height: 130vh;
-    display: grid;
-    place-items: center;
-}
- .presentacion {
-    animation-name: animacion;
-    position: relative;
-    animation-duration: 2s;
-    animation-timing-function: ease;
-
- }
- @keyframes animacion {
-    0%{
-        opacity: 0;
-    }
-    50% {
-        opacity: 50%;
-    }
-    100% {
-        opacity: 100%;
-    }
- }
