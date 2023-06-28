@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Quicksand:wght@300&display=swap');
 
 * {
     margin: 0;
@@ -6,7 +6,17 @@
 }
 body {
     background: linear-gradient(rgb(32, 36, 43), black);
-    font-family: 'Lora', serif;
+    font-family: 'Quicksand', sans-serif;
+    color:white;
+    font-weight: bold;
+}
+.presentacionNombre {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+.height {
+    height: 100vh;
 }
 .contenedor img {
     width: 18vw;
@@ -27,9 +37,34 @@ body {
 
 .paginas {
     background: linear-gradient(rgb(197, 194, 194), white);
+    color: black;
 }
 
 .enlaces {
     width: 5vw;
     height: 10vh;
 }
+
+#paginas {
+    height: 130vh;
+    display: grid;
+    place-items: center;
+}
+ .presentacion {
+    animation-name: animacion;
+    position: relative;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+
+ }
+ @keyframes animacion {
+    0%{
+        opacity: 0;
+    }
+    50% {
+        opacity: 50%;
+    }
+    100% {
+        opacity: 100%;
+    }
+ }
