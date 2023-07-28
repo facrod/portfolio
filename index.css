@@ -24,12 +24,12 @@ body {
     margin: 10px;
     opacity: 70%;
     transform: initial;
-    transition: opacity 1.5s ease;
-    transition: transform 1.5s ease;
+    transition: opacity 1s ease;
+    transition: transform 1s ease;
 
 }
 .contenedor img:hover {
-    transition: 1.5s ease;
+    transition: .4s ease;
     opacity: 100%;
     transform: scale(1.1,1.1);
 }
